@@ -1,24 +1,11 @@
-const btn = document.getElementById("btn");
+const open = document.getElementById("open");
+const close = document.getElementById("close");
 const container = document.getElementById("container");
 
-
-btn.addEventListener("click", () => {
-   createNotification();
+open.addEventListener("click", () => {
+    container.classList.add("active");
 });
 
-
-function createNotification(){
-
-    const notif = document.createElement
-    ('div')
-
-    notif.innerText="this is Crazy"
-
-    notif.classList.add('toast')
-
-    container.appendChild(notif)
-
-    setTimeout(()=>{
-notif.remove()
-    },3000)
-}
+close.addEventListener("click", () => {
+    container.classList.remove("active");
+});
